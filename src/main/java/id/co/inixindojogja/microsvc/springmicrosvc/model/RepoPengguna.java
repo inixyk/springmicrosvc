@@ -11,8 +11,8 @@ import org.springframework.stereotype.Repository;
 @Repository                       // mengelola obyek Pengguna yang tipe pk-nya Integer
 public interface RepoPengguna extends CrudRepository<Pengguna, Integer> {
     //menambahkan fungsi untuk custom return data
-    default List findAllMap() {
-        List daf = new LinkedList<>();
+    default List<Map<String,String>> findAllMap() {
+        List<Map<String,String>> daf = new LinkedList<>();
         for(Pengguna t:findAll()){
             Map<String,String> m = new HashMap<>();
             m.put("nama", t.getNama());

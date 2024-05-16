@@ -66,7 +66,7 @@ public class Latihan {
     @RequestMapping("/daftarpengguna")
     @ResponseBody
     public Object ambilPengguna(){
-        HashMap m = new HashMap<>();
+        HashMap<String,String> m = new HashMap<>();
         m.put("nama", "amir");
         m.put("alamat", "jogja");
         //return m;
