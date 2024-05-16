@@ -22,6 +22,7 @@
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+<!-- ini library untuk generator setter getter -->
 <dependency>
     <groupId>org.projectlombok</groupId>
     <artifactId>lombok</artifactId>
@@ -29,17 +30,32 @@
     <scope>provided</scope>
 </dependency>
 <!-- https://mvnrepository.com/artifact/com.mysql/mysql-connector-j -->
+<!-- ini library untuk konektor ke mysql -->
 <dependency>
     <groupId>com.mysql</groupId>
     <artifactId>mysql-connector-j</artifactId>
     <version>8.3.0</version>
 </dependency>
 <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-jpa -->
+<!-- ini library untuk mapping tabel relasional ke object -->
 <dependency>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-data-jpa</artifactId>
     <version>3.2.5</version>
 </dependency>
+<!-- ini library untuk unit testing -->
+<dependency>
+    <groupId>org.junit.vintage</groupId>
+    <artifactId>junit-vintage-engine</artifactId>
+    <scope>test</scope>
+    <exclusions>
+        <exclusion>
+            <groupId>org.hamcrest</groupId>
+            <artifactId>hamcrest-core</artifactId>
+        </exclusion>
+    </exclusions>
+</dependency>
+<!-- ini untuk koneksi ke database h2 embeded in memmory kalau ga ada punya server mysql -->
 <dependency>
     <groupId>com.h2database</groupId>
     <artifactId>h2</artifactId>

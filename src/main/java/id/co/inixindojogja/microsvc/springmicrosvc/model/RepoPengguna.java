@@ -8,8 +8,9 @@ import java.util.Map;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
-@Repository // mengelola obyek pengguna yang tipe pk-nya integer
+@Repository                       // mengelola obyek Pengguna yang tipe pk-nya Integer
 public interface RepoPengguna extends CrudRepository<Pengguna, Integer> {
+    //menambahkan fungsi untuk custom return data
     default List findAllMap() {
         List daf = new LinkedList<>();
         for(Pengguna t:findAll()){

@@ -8,17 +8,19 @@ import jakarta.persistence.Id;
 import lombok.Getter;
 import lombok.Setter;
 
-@Setter
+
+@Setter //milik library lombol
 @Getter
-@Entity(name = "tbl_pengguna")  //mapping dengan tabel pengguna
+@Entity(name = "tbl_pengguna")  //mapping dengan tabel tbl_pengguna
 public class Pengguna {
     @Id()  //menyatakan primary key
     @GeneratedValue(strategy = GenerationType.IDENTITY)  //menyatakan auto increment
-    private Integer idPengguna;
+    private Integer idPengguna; //tanpa anotasi @Column akan menjadi id_pengguna di tabel
     private String nama;
-    @Column(name = "alamat_pengguna",columnDefinition = "TEXT") //mapping nama kolom
+    @Column(name = "alamat_pengguna",columnDefinition = "TEXT") //mapping nama kolom(optional)
     private String alamat;
 
+    //dengan menggunakan @Setter dan @Getter milik library lombok, set get tidak perlu diketik manual
     // public void setAlamat(String alamat) {
     //     this.alamat = alamat;
     // }
